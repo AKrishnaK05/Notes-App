@@ -16,9 +16,9 @@ Follow these steps to deploy your Notes API and Premium Frontend to the cloud fo
    - **Environment**: `Docker`
 5. **Environment Variables**:
    Click **Advanced** and add:
-   - `DATABASE_URL`: `postgresql://user:password@hostname:port/db` (Get this from Render Postgres)
+   - `DATABASE_URL`: `postgresql://user:password@hostname:port/db` (Render's default URL is now auto-formatted by the app!)
    - `SECRET_KEY`: `A_LONG_RANDOM_STRING_FOR_SECURITY`
-   - `ALLOWED_ORIGINS`: `https://your-frontend-domain.vercel.app`
+   - `ALLOWED_ORIGINS`: `https://your-frontend-domain.vercel.app` (You can now use a simple comma-separated list)
 6. Click **Create Web Service**.
 
 ## 3. Deploy the Database (Render Postgres)
