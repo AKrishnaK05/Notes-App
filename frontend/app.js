@@ -1,7 +1,7 @@
 // API URL configuration - change this to your production backend URL
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://127.0.0.1:8000/api/v1'
-    : 'https://YOUR_BACKEND_URL.com/api/v1';
+    : 'https://notes-app-backend-0g49.onrender.com/api/v1';
 
 // State Management
 let token = localStorage.getItem('token');
