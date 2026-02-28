@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes API | Premium Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-mesh"></div>
+
+    <div class="container">
+        <!-- Auth Section -->
+        <section id="auth-section" class="glass-card">
+            <h1 id="auth-title">Welcome Back</h1>
+            <p id="auth-subtitle" style="color: var(--text-secondary); margin-bottom: 2rem;">Please login to manage your notes.</p>
+            
+            <form id="auth-form">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@company.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" id="auth-submit">Login</button>
+            </form>
+
+            <div style="margin-top: 1.5rem; text-align: center;">
+                <span id="toggle-text" style="color: var(--text-secondary); font-size: 0.875rem;">Don't have an account?</span>
+                <a href="#" id="toggle-auth" style="color: var(--primary); font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-left: 0.5rem;">Register</a>
+            </div>
+            
+            <div id="auth-error" class="hidden" style="color: var(--error); font-size: 0.875rem; margin-top: 1rem; text-align: center;"></div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="hidden">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h1>My Notes</h1>
+                <div style="display: flex; gap: 1rem;">
+                    <button id="add-note-btn" style="width: auto; padding: 0.75rem 1.5rem;">+ New Note</button>
+                    <button id="logout-btn" class="btn-secondary" style="width: auto; padding: 0.75rem 1.5rem;">Logout</button>
+                </div>
+            </div>
+
+            <div id="notes-list" class="notes-grid">
+                <!-- Notes will be injected here -->
+                <div id="no-notes" style="grid-column: 1/-1; text-align: center; padding: 4rem; color: var(--text-secondary);">
+                    No notes found. Create your first note!
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Note Modal -->
+        <div id="note-modal" class="hidden" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center; z-index: 10;">
+            <div class="glass-card" style="width: 100%; max-width: 500px;">
+                <h2>Create New Note</h2>
+                <form id="note-form" style="margin-top: 1.5rem;">
+                    <div class="input-group">
+                        <label for="note-title">Title</label>
+                        <input type="text" id="note-title" placeholder="Note title" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="note-content">Content</label>
+                        <textarea id="note-content" rows="5" placeholder="Write your thoughts..." required></textarea>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button type="submit">Save Note</button>
+                        <button type="button" id="close-modal" class="btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

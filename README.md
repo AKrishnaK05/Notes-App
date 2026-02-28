@@ -21,15 +21,11 @@ A production-ready, clean, and secure Cloud-Based Notes API built with **FastAPI
 ## 📂 Project Structure
 
 ```text
-├── app/
-│   ├── core/           # Configuration
-│   ├── routers/        # API Endpoints
-│   ├── auth.py         # Security Utilities
-│   ├── database.py     # Session Management
-│   ├── dependencies.py  # Protected Routes Helpers
-│   ├── main.py         # App Entry Point
-│   ├── models.py       # SQLAlchemy Entities
-│   └── schemas.py      # Pydantic Validation
+├── app/                # Backend logic (FastAPI)
+├── frontend/           # Premium SPA (HTML/CSS/JS)
+│   ├── index.html      # Dashboard structure
+│   ├── style.css       # Design system & Glassmorphism
+│   └── app.js          # API client & state
 ├── .env                # Environment Variables
 ├── Dockerfile          # Container Config
 └── requirements.txt    # Dependencies
